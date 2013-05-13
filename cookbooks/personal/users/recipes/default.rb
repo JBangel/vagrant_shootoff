@@ -20,6 +20,12 @@ users.each do |u|
       :username => u.name.capitalize
     )
   end
+
+  directory "/home/#{u.name}/develop" do
+    action :create
+    owner  u.name
+    group  u.name
+  end
 end
 
 groups = node['users']['groups']
