@@ -1,5 +1,4 @@
 require 'fileutils'
-require 'pp'
 
 # Install tomcat7
 package 'tomcat7' do
