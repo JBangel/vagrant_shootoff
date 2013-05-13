@@ -5,6 +5,7 @@ description       "Installs/configures the required components for the vagrant s
 version           "1.0.0"
 
 depends           "vim"
+depends           "java-foo"
 
 %w{ ubuntu }.each do |os|
   supports os
