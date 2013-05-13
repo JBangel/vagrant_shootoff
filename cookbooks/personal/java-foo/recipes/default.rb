@@ -7,11 +7,12 @@ package 'tomcat7' do
 end
 
 # Move the war file into place
-source = node['java-foo']['source-file']
-dest   = node['java-foo']['dest-file']
+file   = node['java-foo']['filename']
+source = node['java-foo']['source-dir']
+dest   = node['java-foo']['dest-dir']
 
-ruby_block 'move sample.war into place' do
+ruby_block 'Copy sample.war into place' do
   block do
-    FileUtils.cp source, dest unless File.exist? dest
+    FileUtils.cp "#{source}/#{file}", dest unless File.exist? "#{dest}/#{file}"
   end
 end

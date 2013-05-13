@@ -1,2 +1,3 @@
-default['java-foo']['source-file'] = '/vagrant/java_foo/sample.war'
-default['java-foo']['dest-file']   = '/var/lib/tomcat7/webapps/'
+default['java-foo']['filename']   = 'sample.war'
+default['java-foo']['source-dir'] = '/vagrant/java_foo'
+default['java-foo']['dest-dir']   = '/var/lib/tomcat7/webapps'
