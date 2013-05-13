@@ -80,7 +80,7 @@ Vagrant.configure("2") do |config|
   # some recipes and/or roles.
   #
   config.vm.provision :chef_solo do |chef|
-    chef.cookbooks_path = "cookbooks"
+    chef.cookbooks_path = ["cookbooks/opscode", "cookbooks/personal"]
     chef.add_recipe "vagrant-shootoff"
 
     # You may also specify custom JSON attributes:

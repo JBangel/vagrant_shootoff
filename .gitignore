@@ -1,1 +1,4 @@
 .ruby-version
+.librarian
+Cheffile*
+tmp
