@@ -2,3 +2,4 @@
 .librarian
 Cheffile*
 tmp
+.vagrant
