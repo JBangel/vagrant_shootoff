@@ -11,6 +11,15 @@ users.each do |u|
     password  u.password
     supports  :manage_home => true
   end
+
+  template "/home/#{u.name}/Welcome.txt" do
+    group     u.name
+    owner     u.name
+    source    'welcome.erb'
+    variables(
+      :username => u.name.capitalize
+    )
+  end
 end
 
 groups = node['users']['groups']
