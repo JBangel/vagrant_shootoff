@@ -1,0 +1,11 @@
+description "Application server for flask"
+
+start on runlevel [2345]
+stop on runlevel [!2345]
+
+respawn
+
+script
+    cd <%= @venv_path %>
+    exec bin/python app/routes.py
+end script
